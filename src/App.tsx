@@ -1,10 +1,10 @@
-// import { useBreakpoints, Page, BlockStack, InlineGrid, Box, Card, TextField, Divider, Text, AppProvider } from "@shopify/polaris";
 import enTranslations from '@shopify/polaris/locales/en.json';
 import { AppProvider } from '@shopify/polaris';
 import Navbar from './Navbar';
 import { useState } from 'react';
 import LoginPage from './LoginPage';
 import Page from './PageTypes';
+import { View } from './View';
 
 
 function App(){
@@ -23,7 +23,7 @@ function App(){
       <main>
         {currentPage == 'login' && <LoginPage></LoginPage>}
         {/* TODO create implementation for object creation page */}
-        {/* {currentPage == 'login' && <LoginPage></LoginPage>} */}
+        {currentPage == 'view' && <View></View>}
       </main>
     </AppProvider>
   )
