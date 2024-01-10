@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+
+.navbar{
+    background-color:black;
+    margin: 0 !important;
+    padding: 0;
+    display: block !important;
+}
+.header{
+    margin: none !important;
+}
+.navbar-nav{
+    list-style-type: none;
+    overflow:hidden;
+    display: flex;
+    font-weight: bold;
+    font-family: 'Sawarabi Gothic', sans-serif;
+}
+.nav-link{
+    display: block;
+}
