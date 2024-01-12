@@ -5,6 +5,7 @@ import { useState } from 'react';
 import LoginPage from './LoginPage';
 import Page from './PageTypes';
 import { View } from './View';
+import AddSubmission from './AddSubmission';
 
 
 function App(){
@@ -24,6 +25,7 @@ function App(){
         {currentPage == 'login' && <LoginPage></LoginPage>}
         {/* TODO create implementation for object creation page */}
         {currentPage == 'view' && <View></View>}
+        {currentPage == 'addSubmission' && <AddSubmission></AddSubmission>}
       </main>
     </AppProvider>
   )

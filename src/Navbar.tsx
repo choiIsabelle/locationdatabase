@@ -30,7 +30,7 @@ const Navbar=({ onNavigate })=>{
               </NavItem>
             </li>
             <li className="nav-item">
-              <NavItem className="nav-link" aria-current="page" href="#" onClick={()=>onNavigate('view')}>
+              <NavItem className="nav-link" aria-current="page" href="#" onClick={()=>onNavigate('addSubmission')}>
                 Add Submission
               </NavItem>
             </li>
