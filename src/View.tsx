@@ -6,6 +6,7 @@ export const View=()=>{
 
   const CardContentContainer= styled.div`
     padding: 0.5rem;
+    margin-top: 2rem;
   `
     return (
         <Page fullWidth>

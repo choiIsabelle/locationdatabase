@@ -6,16 +6,25 @@ import loginTitle from './LoginStyle.module.css';
 import loginButton from './LoginStyle.module.css';
 import avatar from './LoginStyle.module.css'
 import text from './LoginStyle.module.css'
+import { useState } from 'react';
 
 const handleOnClick = () => {
   //TODO implement verification
 };
+
 
 const handleLinkClick=()=>{
 
 }
 
 function LoginContainer(){
+  const loginMessage: string ="Sign into your account";
+  const [userHasAccount, setUserHasAccount] = useState(true);
+
+const handleAccountCreation=()=>{
+  setUserHasAccount(false);
+
+}
     return(
         <div className={loginContainer.loginContainer}>
         <Page fullWidth>
@@ -27,13 +36,13 @@ function LoginContainer(){
               <LegacyCard >
                 <div className={loginTitle.loginTitle}>
                   <Text as="h2" variant="bodyMd">
-                    Sign into your account
+                    {loginMessage}
                   </Text>
                 </div>
                 <Login />
                   <button className={loginButton.loginButton} onClick={handleOnClick}>Login as a user</button>
-                  <button className={loginButton.loginButton} onClick={handleOnClick}>Create new user account</button>
-                  <p className={text.text}> <a href='' onClick={handleLinkClick}>Forgot your account details? </a></p>
+                  <button className={loginButton.loginButton} onClick={handleAccountCreation}>Create new user account</button>
+                  <p className={text.text}> <a href='' onClick={handleAccountCreation}>Forgot your account details? </a></p>
               </LegacyCard>
             </Layout.Section>
           </Layout>

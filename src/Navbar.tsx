@@ -34,6 +34,11 @@ const Navbar=({ onNavigate })=>{
                 Add Submission
               </NavItem>
             </li>
+            <li className="nav-item">
+              <NavItem className="nav-link" aria-current="page" href="#" onClick={()=>onNavigate('addSubmission')}>
+                Handle Submissions
+              </NavItem>
+            </li>
           </ul>
 
         </nav>

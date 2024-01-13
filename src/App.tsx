@@ -9,8 +9,9 @@ import AddSubmission from './AddSubmission';
 
 
 function App(){
-  // default view of the application is the login page
+  // the initial state of the webpage is the login page
   const[currentPage, setCurrentPage] =useState('login');
+  const[userRegistrationState, setUserRegistrationState] = useState('hasAccount');
 
   const handleNavigate=(page:Page)=>{
     setCurrentPage(page);
@@ -19,13 +20,14 @@ function App(){
   return(
     <AppProvider i18n={enTranslations}>
       <header>
+        {/* when I render the Navbar, I pass in a default value representing the current page */}
         <Navbar onNavigate={handleNavigate} />
       </header>
       <main>
         {currentPage == 'login' && <LoginPage></LoginPage>}
-        {/* TODO create implementation for object creation page */}
         {currentPage == 'view' && <View></View>}
         {currentPage == 'addSubmission' && <AddSubmission></AddSubmission>}
+        {currentPage == 'handleSubmission' && <HandleSubmission></HandleSubmission>}
       </main>
     </AppProvider>
   )

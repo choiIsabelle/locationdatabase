@@ -1,12 +1,11 @@
-import {CalloutCard} from '@shopify/polaris';
 import submissionCard from './AddSubmissionForm.module.css'
 import text from './AddSubmissionForm.module.css'
-import React from 'react';
 
 function AddSubmisionTitle() {
+    const addSubmissionMessage = "Already submitted? View all submissions ";
   return (
     <div className={submissionCard.submissionCard}>
-        <h3 className={text.text}> Already submitted? View all submissions here:</h3>
+        <h3 className={text.text}> {addSubmissionMessage}<a href="">here</a></h3>
       </div>
   );
 }

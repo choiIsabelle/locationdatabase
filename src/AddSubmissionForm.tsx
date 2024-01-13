@@ -6,6 +6,7 @@ import submissionButton from './AddSubmissionForm.module.css'
 import submissionCard from './AddSubmissionForm.module.css'
 import textfield from './AddSubmissionForm.module.css'
 import AddSubmisionTitle from './AddSubmissionTitle';
+import h3 from './AddSubmissionForm.module.css';
 
 export const AddSubmissionForm=()=> {
 
@@ -30,7 +31,7 @@ export const AddSubmissionForm=()=> {
         <div>
             <AddSubmisionTitle></AddSubmisionTitle>
             <div className={submissionCard.submissionCard}>
-                <h4> Add a new submission using the form below</h4>
+                <h3 className={h3.h3}> Add a new submission using the form below</h3>
         <div className={text.text}>
         <FormLayout>
             <div className={textfield.textfield}>
