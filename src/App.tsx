@@ -6,6 +6,7 @@ import LoginPage from './LoginPage';
 import Page from './PageTypes';
 import { View } from './View';
 import AddSubmission from './AddSubmission';
+import { HandleSubmission } from './HandleSubmission';
 
 
 function App(){
@@ -25,6 +26,7 @@ function App(){
       </header>
       <main>
         {currentPage == 'login' && <LoginPage></LoginPage>}
+        {userRegistrationState == 'hasAccount'}
         {currentPage == 'view' && <View></View>}
         {currentPage == 'addSubmission' && <AddSubmission></AddSubmission>}
         {currentPage == 'handleSubmission' && <HandleSubmission></HandleSubmission>}

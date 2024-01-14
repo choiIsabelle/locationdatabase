@@ -3,7 +3,6 @@ const AddSubmission=()=>{
 return(
     <div>
         <AddSubmissionForm></AddSubmissionForm>
-
     </div>
 );
 }
