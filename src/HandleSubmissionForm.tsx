@@ -14,20 +14,20 @@ export const HandleSubmissionForm=()=>{
     const searchButtonText="Search"
 
     const [currentText, setCurrentText]=useState('');
-    const [buttonClicked, setButtonclicked]=useState(false);
+    const [isSearching, setisSearching]=useState(false);
 
     const handleTextChange=( newText: string)=>{
         setCurrentText(newText)
     }
     const handleButtonClick=()=>{
-        setButtonclicked(buttonClicked? false: true);
+        setisSearching(isSearching? false: true);
     }
     // Spinner effect is rendered when the button is clicked
     // The spinner effect is removed once the user begins to type, or if the submit button is re-clicked
     // TODO add  search button functionality
     useEffect(()=>{
         const timeoutId = setTimeout(() => {
-            setButtonclicked(false);
+            setisSearching(false);
         }, 500);
         return () => clearTimeout(timeoutId);
 
@@ -46,7 +46,7 @@ export const HandleSubmissionForm=()=>{
                 <HelperText>{helpText}</HelperText>
                 
             }/>
-               {buttonClicked && <div style={{width:'13px'}}><Spinner size="small" /></div>}
+               {isSearching && currentText && <div style={{width:'13px'}}><Spinner size="small" /></div>}
             <button onClick={handleButtonClick} className={handleSubmissionSearchButton.handleSubmissionSearchButton}>{searchButtonText}</button>
         </FormLayout>
             </div> 

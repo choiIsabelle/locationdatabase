@@ -19,6 +19,7 @@ const handleLinkClick=()=>{
 
 function LoginContainer(){
   const loginMessage: string ="Sign into your account";
+  const forgotAccountMessage: string ="Forgot your account details? "
   const [userHasAccount, setUserHasAccount] = useState(true);
 
 const handleAccountCreation=()=>{
@@ -42,7 +43,7 @@ const handleAccountCreation=()=>{
                 <Login />
                   <button className={loginButton.loginButton} onClick={handleOnClick}>Login as a user</button>
                   <button className={loginButton.loginButton} onClick={handleAccountCreation}>Create new user account</button>
-                  <p className={text.text}> <a href='' onClick={handleAccountCreation}>Forgot your account details? </a></p>
+                  <p className={text.text}> <a href='' onClick={handleAccountCreation}>{forgotAccountMessage}</a></p>
               </LegacyCard>
             </Layout.Section>
           </Layout>

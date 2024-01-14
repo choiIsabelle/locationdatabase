@@ -1,6 +1,5 @@
-import {FormLayout, TextField} from '@shopify/polaris';
-import {useState, useCallback} from 'react';
-import styled from 'styled-components';
+import {FormLayout, Spinner, TextField} from '@shopify/polaris';
+import {useState, useCallback, useEffect} from 'react';
 import text from './AddSubmissionForm.module.css'
 import submissionButton from './AddSubmissionForm.module.css'
 import submissionCard from './AddSubmissionForm.module.css'
@@ -9,22 +8,26 @@ import AddSubmisionTitle from './AddSubmissionTitle';
 import h3 from './AddSubmissionForm.module.css';
 
 export const AddSubmissionForm=()=> {
-
-    const StyledTextField = styled.div`
-    font-family: font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    `
-    const [newsletter, setNewsletter] = useState(false);
     const [email, setEmail] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleSubmission =()=>{
+      setIsSubmitting(isSubmitting? false : true)
+    }
+
+    useEffect(()=>{
+      const timeoutId = setTimeout(() => {
+        setIsSubmitting(false);
+      }, 500);
+      return () => clearTimeout(timeoutId);
+
+  }, [isSubmitting])
   
-    const handleSubmit = useCallback(() => {
-      setEmail('');
-      setNewsletter(false);
-    }, []);
+    // const handleSubmit = useCallback(() => {
+    //   setEmail('');
+    //   setNewsletter(false);
+    // }, []);
   
-    const handleNewsLetterChange = useCallback(
-      (value: boolean) => setNewsletter(value),
-      [],
-    );
   
     const handleEmailChange = useCallback((value: string) => setEmail(value), []);
     return(
@@ -38,7 +41,7 @@ export const AddSubmissionForm=()=> {
         <TextField
           value={email}
           onChange={handleEmailChange}
-          label="Email"
+          label="Name"
           type="email"
           maxHeight={20}
           autoComplete="email"
@@ -51,12 +54,9 @@ export const AddSubmissionForm=()=> {
         />
         </div>
         <div className={textfield.textfield}>
-        <TextField
-        label="Enter submission details"
-        autoComplete="password"
-        />
         </div>
-        <button className={submissionButton.submissionButton} onClick={handleSubmit}>Submit</button>
+        <button className={submissionButton.submissionButton} onClick={handleSubmission}>Submit</button>
+        {isSubmitting && <div style={{width:'5%', marginLeft:'1.5rem', marginTop:'0.5rem'}}><Spinner></Spinner></div>}
       </FormLayout>
       </div>
       </div>
