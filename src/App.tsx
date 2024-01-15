@@ -7,6 +7,7 @@ import Page from './PageTypes';
 import { View } from './View';
 import AddSubmission from './AddSubmission';
 import { HandleSubmission } from './HandleSubmission';
+import { ServerTest } from './ServerTest';
 
 
 function App(){
@@ -30,6 +31,7 @@ function App(){
         {currentPage == 'view' && <View></View>}
         {currentPage == 'addSubmission' && <AddSubmission></AddSubmission>}
         {currentPage == 'handleSubmission' && <HandleSubmission></HandleSubmission>}
+        {currentPage == 'servertest' && <ServerTest></ServerTest>}
       </main>
     </AppProvider>
   )
