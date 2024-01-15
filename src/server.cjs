@@ -1,14 +1,14 @@
-import express from 'express';
-import { Pool } from 'pg';
+const express = require('express');
+const { Pool } = require('pg');
 
 const app = express();
 const port = 3001;
 
 const pool = new Pool({
-  user: 'your_username',
-  host: 'your_host',
+  user: 'postgres',
+  host: '127.0.0.1',
   database: 'your_database',
-  password: 'your_password',
+  password: '2003',
   port: 5432,
 });
 
