@@ -21,6 +21,9 @@ function App(){
   
   return(
     <AppProvider i18n={enTranslations}>
+      <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+      <head>
+      </head>
       <header>
         {/* when I render the Navbar, I pass in a default value representing the current page */}
         <Navbar onNavigate={handleNavigate} />
@@ -33,6 +36,9 @@ function App(){
         {currentPage == 'handleSubmission' && <HandleSubmission></HandleSubmission>}
         {currentPage == 'servertest' && <ServerTest></ServerTest>}
       </main>
+      <body>
+        
+      </body>
     </AppProvider>
   )
 }
