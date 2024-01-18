@@ -44,6 +44,11 @@ const Navbar=({ onNavigate })=>{
                 Server Test
               </NavItem>
             </li>
+            <li className="nav-item">
+              <NavItem className="nav-link" aria-current="page" href="#" onClick={()=>onNavigate('newSubTab')}>
+                New Sub Tab
+              </NavItem>
+            </li>
           </ul>
 
         </nav>

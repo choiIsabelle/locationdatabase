@@ -8,6 +8,7 @@ import { View } from './View';
 import AddSubmission from './AddSubmission';
 import { HandleSubmission } from './HandleSubmission';
 import { ServerTest } from './ServerTest';
+import { NewSubmissionTab } from './Components/NewSubmissionTab';
 
 
 function App(){
@@ -35,6 +36,7 @@ function App(){
         {currentPage == 'addSubmission' && <AddSubmission></AddSubmission>}
         {currentPage == 'handleSubmission' && <HandleSubmission></HandleSubmission>}
         {currentPage == 'servertest' && <ServerTest></ServerTest>}
+        {currentPage =='newSubTab' && <NewSubmissionTab></NewSubmissionTab>}
       </main>
       <body>
         
