@@ -1,13 +1,16 @@
 import styled from "styled-components"
-import NewInputTodo from "./NewInputTodo"
 import { useState } from "react"
-import { TextField } from "@shopify/polaris"
+import { NewListSubmissions } from "./NewListSubmissions"
+import { FolderIcon } from "../Icons/FolderIcon"
 
 export const NewSubmissionTab=()=>{
     const HandleSubmissionsText = "Handle Submissions here"
     const Card = styled.div`
     position: relative;
-    margin-top:4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     top: 50%;
     left: 50%;
@@ -22,12 +25,16 @@ export const NewSubmissionTab=()=>{
     text-align: center;
     `
     const InputInfo = styled.span`
-    font-weight: 350;
-    font-size: 12px;
+    font-size: 14px;
     text-align: left;
-    
     `
-    const TextfieldContainer = styled.div`
+    const IconContainer = styled.div`
+    position: relative;
+    margin-top:2rem;
+    margin-left: 33rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     `
 
     const SubmitButton = styled.button`
@@ -40,12 +47,14 @@ export const NewSubmissionTab=()=>{
     font-weight: bold;
     `
 
-    const [description, setDescription] =useState('')
-    const [todos, setTodos] = useState([])
+    const [description, setDescription] = useState('');
 
-    
     const handleInputChange = (e) => {
-        setDescription(e.target.value);
+        if (e.target && e.target.value) {
+          setDescription(e.target.value);
+        } else {
+          console.error('Invalid event or value:', e);
+        }
       };
 
     const submitForm= async(e)=>{
@@ -58,8 +67,6 @@ export const NewSubmissionTab=()=>{
             body: JSON.stringify(body)
         });
 
-        const newTodo = await response.json();
-        setTodos((prevTodos) => [...prevTodos, newTodo]);
         setDescription('')
         console.log(response)
     }
@@ -70,35 +77,45 @@ export const NewSubmissionTab=()=>{
 
 
     return(
-        <div>
+         <div>
+            <IconContainer>
+            <tr>
+                <td>
                 <Text>{HandleSubmissionsText}</Text>
+                </td>
+                <td><FolderIcon></FolderIcon>
+                </td>
+                </tr>
+                </IconContainer>
             <Card>
             <table>
                 <thead>
                     <tr>
                         <th>
+                        <InputInfo>Add a new Submission</InputInfo>
             </th>
             </tr>
             </thead>
                 <tr>
                 <td>
-                    <TextfieldContainer>
-                    <TextField 
-                    label='Add a new submission'
-                    autoComplete=""
-                    helpText={<InputInfo>Press add when done</InputInfo>}
+                    <input 
                     value={description}
-                    onChange={handleInputChange}
-                     ></TextField>
-                    </TextfieldContainer>
+                    onChange={(e) => {
+                        console.log('Event:', e);
+                        handleInputChange(e);
+                      }}
+                     ></input>
                     </td>
                     <td>
+                        
                     <SubmitButton onClick={submitForm}>Add</SubmitButton>
                     </td>
 
                 </tr>
                 </table>
             </Card>
+
+            <NewListSubmissions></NewListSubmissions>
 
         </div>
     )

@@ -24,7 +24,7 @@ const Navbar=({ onNavigate })=>{
                 Login
               </NavItem>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <NavItem className="nav-link" aria-current="page" href="#" onClick={()=>onNavigate('view')}>
                 View All
               </NavItem>
@@ -43,10 +43,10 @@ const Navbar=({ onNavigate })=>{
               <NavItem className="nav-link" aria-current="page" href="#" onClick={()=>onNavigate('servertest')}>
                 Server Test
               </NavItem>
-            </li>
+            </li> */}
             <li className="nav-item">
               <NavItem className="nav-link" aria-current="page" href="#" onClick={()=>onNavigate('newSubTab')}>
-                New Sub Tab
+                Handle Submissions
               </NavItem>
             </li>
           </ul>

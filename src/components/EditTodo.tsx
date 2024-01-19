@@ -1,6 +1,20 @@
 import { useState } from "react";
+import styled from "styled-components";
 
 export const EditTodo=(props)=>{
+
+    const EditButton = styled.button`
+    cursor:pointer;
+    background-color: black;
+    color:white;
+    margin-left: 0.2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    `
+    const StyledInput = styled.input`
+    padding: 0.1rem;
+    `
     const {todo} = props;
 
     const [description, setDescription] = useState(todo.description);
@@ -22,12 +36,12 @@ export const EditTodo=(props)=>{
     
     return(
         <div id={`id${todo.todo_id}`}>
-            <input 
+            <StyledInput 
             type='text' 
             value={description}
             onChange={e=> setDescription(e.target.value)}
-            ></input>
-            <button onClick={e => updateDescription(e)}>Update</button>
+            ></StyledInput>
+            <EditButton onClick={e => updateDescription(e)}>Update</EditButton>
 </div>
     )
 }
