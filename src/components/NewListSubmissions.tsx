@@ -4,7 +4,7 @@ import { EditTodo } from "./EditTodo";
 
 const Card = styled.table`
   position: relative;
-  margin-top: 3rem;
+  margin-top: 6rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   top: 50%;
   left: 50%;
@@ -17,7 +17,6 @@ const Card = styled.table`
 const TableHead = styled.th`
 font-size: 14px;
 `
-
 const DeleteButton = styled.button`
 cursor:pointer;
 background-color: black;

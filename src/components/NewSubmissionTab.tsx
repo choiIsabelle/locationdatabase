@@ -1,11 +1,11 @@
 import styled from "styled-components"
 import { useState } from "react"
-import { NewListSubmissions } from "./NewListSubmissions"
 import { FolderIcon } from "../Icons/FolderIcon"
 
 export const NewSubmissionTab=()=>{
     const HandleSubmissionsText = "Handle Submissions here"
     const Card = styled.div`
+    margin-bottom:4rem;
     position: relative;
     display: flex;
     align-items: center;
@@ -115,7 +115,7 @@ export const NewSubmissionTab=()=>{
                 </table>
             </Card>
 
-            <NewListSubmissions></NewListSubmissions>
+
 
         </div>
     )

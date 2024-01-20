@@ -51,7 +51,7 @@ const Navbar=({ onNavigate })=>{
             </li>
             <li className="nav-item">
               <NavItem className="nav-link" aria-current="page" href="#" onClick={()=>onNavigate('test')}>
-                  Test
+                  View Submissions
                 </NavItem>
 
             </li>
