@@ -29,12 +29,10 @@ export const NewSubmissionTab=()=>{
     text-align: left;
     `
     const IconContainer = styled.div`
-    position: relative;
-    margin-top:2rem;
-    margin-left: 33rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
     `
 
     const SubmitButton = styled.button`
@@ -51,12 +49,13 @@ export const NewSubmissionTab=()=>{
 
     const handleInputChange = (e) => {
         if (e.target && e.target.value) {
+            e.preventDefault()
           setDescription(e.target.value);
         } else {
           console.error('Invalid event or value:', e);
         }
       };
-
+      
     const submitForm= async(e)=>{
         e.preventDefault();
         try {
@@ -100,6 +99,7 @@ export const NewSubmissionTab=()=>{
                 <td>
                     <input 
                     value={description}
+                    autoFocus
                     onChange={(e) => {
                         console.log('Event:', e);
                         handleInputChange(e);
