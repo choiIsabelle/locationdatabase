@@ -16,6 +16,7 @@ function App() {
   // the initial state of the webpage is the login page
   const [currentPage, setCurrentPage] = useState('login');
   const [userHasAccount, setUserHasAccount] = useState(false);
+  const [userCreates, setUserCreates] = useState(false);
 
   const handleNavigate = (page) => {
     setCurrentPage(page);
@@ -23,6 +24,11 @@ function App() {
 
   const handleLoginStatus = () => {
     setUserHasAccount((prevUserHasAccount) => !prevUserHasAccount);
+  };
+
+  const handleOnCreate=()=>{
+    setUserCreates(userCreates ? false : true)
+
   };
 
   return (
@@ -33,12 +39,13 @@ function App() {
       </header>
       <main>
         {/* Render LoginContainer if the user is on the 'login' page and does not have an account */}
-        {currentPage === 'login' && !userHasAccount && (
-          <LoginContainer onLogin={handleLoginStatus} />
+        {currentPage === 'login' && !userHasAccount && !userCreates && (
+          <LoginContainer onLogin={handleLoginStatus} onCreate={handleOnCreate} />
         )}
 
         {/* Render AccountCreation if the user has an account */}
         {userHasAccount && currentPage==='login' && <AccountCreation></AccountCreation>}
+        {userCreates && currentPage==='login' && <AccountCreation></AccountCreation>}
 
         {/* TODO: implement a means of showing admin-only content and user-accessible content */}
         

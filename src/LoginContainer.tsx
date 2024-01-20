@@ -12,7 +12,7 @@ const handleOnClick = () => {
 };
 
 
-const LoginContainer =({ onLogin })=>{
+const LoginContainer =({ onLogin, onCreate })=>{
   const loginBtn = 'Login as a user'
   const createBtn = 'Create new user account'
   const loginMessage: string ="Sign into your account";
@@ -34,7 +34,7 @@ const LoginContainer =({ onLogin })=>{
                 </div>
                 <Login />
                   <button className={loginButton.loginButton} onClick={()=>onLogin(true)}>{loginBtn}</button>
-                  <button className={loginButton.loginButton}>{createBtn}</button>
+                  <button className={loginButton.loginButton} onClick={()=>onCreate(true)}>{createBtn}</button>
                   <p className={text.text}> <a href=''>{forgotAccountMessage}</a></p>
               </LegacyCard>
             </Layout.Section>
