@@ -37,6 +37,7 @@ export const EditTodo=(props)=>{
     return(
         <div id={`id${todo.todo_id}`}>
             <StyledInput 
+            autoFocus
             type='text' 
             value={description}
             onChange={e=> setDescription(e.target.value)}
