@@ -1,10 +1,6 @@
 ## Presentation
-separated layout
-![reactsofar2jan19](https://github.com/choiIsabelle/locationdatabase/assets/67203277/3dd9c785-f1a0-4387-bd82-fccb1c2f5bca)
+![reactsofar2jan21](https://github.com/choiIsabelle/locationdatabase/assets/67203277/a1e9b1dc-66af-412c-9fdf-86ce5f6dc822)
 
-
-condensed layout
-![reactsofar2jan13](https://github.com/choiIsabelle/locationdatabase/assets/67203277/ed6d040c-9625-468b-8fe1-b5eba53714de)
 
 ## How to Run
 
