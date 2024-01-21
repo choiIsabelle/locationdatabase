@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { PersonCircleIcon } from "../Icons/PersonCircleIcon"
+import { CondensedInput } from "./CondensedInput"
 
 const Card = styled.div`
 position: relative;
@@ -49,8 +50,8 @@ export const ProfileEditor=()=>{
             <Card>
                 <TitleText>{title}</TitleText>
                 <ProfileElementGrid>
-                    <StyledInput></StyledInput>
-                    <StyledInput></StyledInput>
+                    <CondensedInput mainText="Username" subText=""></CondensedInput>
+                    <CondensedInput mainText="Email" subText=""></CondensedInput>
                 <IconContainer><PersonCircleIcon></PersonCircleIcon></IconContainer>
                 </ProfileElementGrid>
 
