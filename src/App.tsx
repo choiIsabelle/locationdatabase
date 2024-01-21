@@ -9,7 +9,7 @@ import { HandleSubmission } from './HandleSubmission';
 import { ServerTest } from './ServerTest';
 import { NewSubmissionTab } from './Components/NewSubmissionTab';
 import { Test } from './Components/Test';
-import { AccountCreation } from './Components/AccountCreation';
+import { ProfileEditor } from './Components/ProfileEditor';
 
 
 function App() {
@@ -44,8 +44,8 @@ function App() {
         )}
 
         {/* Render AccountCreation if the user has an account */}
-        {userHasAccount && currentPage==='login' && <AccountCreation></AccountCreation>}
-        {userCreates && currentPage==='login' && <AccountCreation></AccountCreation>}
+        {userHasAccount && currentPage==='login' && <ProfileEditor></ProfileEditor>}
+        {userCreates && currentPage==='login' && <ProfileEditor></ProfileEditor>}
 
         {/* TODO: implement a means of showing admin-only content and user-accessible content */}
         
