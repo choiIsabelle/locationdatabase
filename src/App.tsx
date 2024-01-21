@@ -20,6 +20,11 @@ function App() {
 
   const handleNavigate = (page) => {
     setCurrentPage(page);
+    //TODO: this is not a good way of getting out of the profile editor component
+    //because this would change whether user accessible content remains accessible
+    // e.g. this resets the logic acknowledging that the user has an account
+    setUserHasAccount(false);
+    setUserCreates(false);
   };
 
   const handleLoginStatus = () => {
@@ -44,8 +49,8 @@ function App() {
         )}
 
         {/* Render AccountCreation if the user has an account */}
-        {userHasAccount && currentPage==='login' && <ProfileEditor></ProfileEditor>}
-        {userCreates && currentPage==='login' && <ProfileEditor></ProfileEditor>}
+        {userHasAccount && currentPage==='login' && <ProfileEditor onNavigate={handleNavigate}></ProfileEditor>}
+        {userCreates && currentPage==='login' && <ProfileEditor onNavigate={handleNavigate}></ProfileEditor>}
 
         {/* TODO: implement a means of showing admin-only content and user-accessible content */}
         

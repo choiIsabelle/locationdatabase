@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { PersonCircleIcon } from "../Icons/PersonCircleIcon"
 import { CondensedInput } from "./CondensedInput"
+import { NavigationButtons } from "./NavigationButtons"
 
 const Card = styled.div`
 position: relative;
@@ -21,10 +22,6 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 font-size: 19px;
 `
 
-const SubText = styled.p`
-font-weight: 200;
-`
-
 const IconContainer = styled.div`
 position: relative;
 width: 90px;
@@ -37,14 +34,10 @@ gap: 10px;
 flex-direction: row;
 `
 
-const StyledInput = styled.input`
-height: 20px;
-`
-
 
 const title = "Profile Editor"
 
-export const ProfileEditor=()=>{
+export const ProfileEditor=({ onNavigate })=>{
     return(
         <div>
             <Card>
@@ -54,7 +47,7 @@ export const ProfileEditor=()=>{
                     <CondensedInput mainText="Email" subText=""></CondensedInput>
                 <IconContainer><PersonCircleIcon></PersonCircleIcon></IconContainer>
                 </ProfileElementGrid>
-
+                <NavigationButtons onCancel={()=>onNavigate('login')}></NavigationButtons>
 
             </Card>
             
