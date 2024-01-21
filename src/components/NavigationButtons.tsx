@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const StyledButtonContainer = styled.div`
 display: flex;
-gap: 0.2rem;
+gap: 0.9rem;
 `
 const SaveButton = styled.button`
 font-weight: bold;

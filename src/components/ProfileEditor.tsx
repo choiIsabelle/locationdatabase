@@ -5,12 +5,12 @@ import { NavigationButtons } from "./NavigationButtons"
 
 const Card = styled.div`
 position: relative;
-margin-top: 7rem;
+margin-top: 13rem;
 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
-padding: 0.5rem;
+padding: 0.9rem;
 width: 420px;
 box-shadow: 0 2px 9px rgba(0, 0, 0, 0.2);
 }
@@ -23,31 +23,37 @@ font-size: 19px;
 `
 
 const IconContainer = styled.div`
-position: relative;
 width: 90px;
+margin-left: 10rem;
 `
 
 const ProfileElementGrid = styled.div`
 justify-content: space-between;
 display: flex;
 gap: 10px;
-flex-direction: row;
+flex-direction: column;
+margin-bottom: 2rem;
+`
+
+const SubText = styled.p`
+text-align: center;
 `
 
 
 const title = "Profile Editor"
 
-export const ProfileEditor=({ onNavigate })=>{
+export const ProfileEditor=({ onCancel })=>{
     return(
         <div>
             <Card>
                 <TitleText>{title}</TitleText>
+                <IconContainer><PersonCircleIcon></PersonCircleIcon></IconContainer>
+                <SubText>Currently logged in as:</SubText>
                 <ProfileElementGrid>
                     <CondensedInput mainText="Username" subText=""></CondensedInput>
                     <CondensedInput mainText="Email" subText=""></CondensedInput>
-                <IconContainer><PersonCircleIcon></PersonCircleIcon></IconContainer>
                 </ProfileElementGrid>
-                <NavigationButtons onCancel={()=>onNavigate('login')}></NavigationButtons>
+                <NavigationButtons onCancel={()=>onCancel()}></NavigationButtons>
 
             </Card>
             
