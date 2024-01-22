@@ -3,7 +3,7 @@ import { useState } from "react"
 import { FolderIcon } from "../Icons/FolderIcon"
 
 export const NewSubmissionTab=()=>{
-    const HandleSubmissionsText = "Handle Submissions here"
+    const HandleSubmissionsText = "Add a New Submission Here"
     const Card = styled.div`
     margin-bottom:4rem;
     position: relative;

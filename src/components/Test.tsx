@@ -22,7 +22,7 @@ height: 0px;
 padding: 0 !important;
 `
 
-const introText = "View all current Submissions"
+const introText = "Handle All Submissions Here"
 
 export const Test=()=>{
     return(
