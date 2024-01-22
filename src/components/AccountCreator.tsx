@@ -39,10 +39,10 @@ text-align: center;
 `
 
 
-const title = "Profile Editor"
-const currentLoginUser = "Currently logged in as: "
+const title = "Account Creator"
+const currentLoginUser = "Create a User Account: "
 
-export const ProfileEditor=({ onCancel, currentUser })=>{
+export const AccountCreator=({ onCancel, currentUser })=>{
     return(
         <div>
             <Card>

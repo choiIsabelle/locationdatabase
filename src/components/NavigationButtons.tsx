@@ -20,7 +20,7 @@ background-color: white;
 export const NavigationButtons=({onCancel})=>{
     return(
         <StyledButtonContainer>
-            <SaveButton>Submit Changes</SaveButton>
+            <SaveButton>Submit</SaveButton>
             <CancelButton onClick={onCancel}>Cancel</CancelButton>
 
         </StyledButtonContainer>

@@ -10,6 +10,7 @@ import { ServerTest } from './ServerTest';
 import { NewSubmissionTab } from './Components/NewSubmissionTab';
 import { Test } from './Components/Test';
 import { ProfileEditor } from './Components/ProfileEditor';
+import { AccountCreator } from './Components/AccountCreator';
 
 
 function App() {
@@ -53,7 +54,7 @@ const handleCancel=()=>{
 
         {/* Render AccountCreation if the user has an account */}
         {userHasAccount && currentPage==='login' && <ProfileEditor onCancel={handleCancel}></ProfileEditor>}
-        {userCreates && currentPage==='login' && <ProfileEditor onCancel={handleCancel}></ProfileEditor>}
+        {userCreates && currentPage==='login' && <AccountCreator onCancel={handleCancel}></AccountCreator>}
 
         {/* TODO: implement a means of showing admin-only content and user-accessible content */}
         
