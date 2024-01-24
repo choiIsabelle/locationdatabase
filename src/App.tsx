@@ -26,6 +26,7 @@ function App() {
     setCurrentPage(page);
   };
 
+  //TODO: Make this handle logging out. I need log out UI
 const handleCancel=()=>{
   setUserHasAccount(false);
   setUserCreates(false);
