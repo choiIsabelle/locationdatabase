@@ -7,14 +7,14 @@ gap: 0.9rem;
 const SaveButton = styled.button`
 font-weight: bold;
 border-color: green;
-color: green;
-background-color: white;
+color: white;
+background-color: green;
 `
 const CancelButton = styled.button`
 font-weight: bold;
 border-color: red;
-color: red;
-background-color: white;
+color: white;
+background-color: red;
 `
 
 export const NavigationButtons=({onCancel})=>{

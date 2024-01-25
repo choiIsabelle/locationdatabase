@@ -13,6 +13,7 @@ margin-top:1rem;
 `
 const Text = styled.h1`
 padding: 1rem;
+margin-top: 4rem;
 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 font-size: 20px;
 text-align: center;

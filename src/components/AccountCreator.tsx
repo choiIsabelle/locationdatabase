@@ -5,7 +5,7 @@ import { NavigationButtons } from "./NavigationButtons"
 
 const Card = styled.div`
 position: relative;
-margin-top: 13rem;
+margin-top: 19rem;
 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 top: 50%;
 left: 50%;

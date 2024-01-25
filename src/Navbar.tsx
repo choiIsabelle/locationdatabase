@@ -52,9 +52,9 @@ const Navbar=({ onNavigate })=>{
                 </NavItem>
             </li>
             <li className="nav-item">
-            <NavItem className="nav-link" aria-current="page">
+
               <LoginOptionsMenu></LoginOptionsMenu>
-              </NavItem>
+
             </li>
           </ul>
 

@@ -4,7 +4,7 @@ import { EditTodo } from "./EditTodo";
 
 const Card = styled.table`
   position: relative;
-  margin-top: 6rem;
+  margin-top: 1.5rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   top: 50%;
   left: 50%;

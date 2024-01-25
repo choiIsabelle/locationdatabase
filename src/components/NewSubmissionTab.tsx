@@ -22,6 +22,7 @@ export const NewSubmissionTab=()=>{
     const Text = styled.h1`
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 20px;
+    margin-top: 4rem;
     text-align: center;
     `
     const InputInfo = styled.span`

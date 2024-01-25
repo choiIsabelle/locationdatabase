@@ -1,18 +1,24 @@
 import  { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { EyeIcon } from '../Icons/EyeIcon';
+import { SignoutIcon } from '../Icons/SignoutIcon';
 
 const LoginOptionsBtn = styled.h1`
 cursor:pointer;
+margin-top: 0.9rem;
 background-color: black;
 color:White;
 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 font-size: 16px;
 font-weight: bold;
-margin: 0;
+
 `
 const DropdownContentContainer = styled.div`
 font-size: 15px;
+padding: 0.5rem;
+box-shadow: 0 2px 9px rgba(0, 0, 0, 0.2);
+border-radius: 5px;
+background-color: black;
 margin-top: 0.4rem;
 justify-content: space-between;
 flex-direction: column;
@@ -64,9 +70,9 @@ export const LoginOptionsMenu = () => {
           // kind of annoying when it closes too quickly
         //   onMouseOut={() => setDropdownVisible(false)}
         >
-          <ItemContainer><EyeIcon />          <StyledLink>Log out</StyledLink>  </ItemContainer>
+          <ItemContainer>  <SignoutIcon />        <StyledLink>Log out</StyledLink>  </ItemContainer>
 
-          <ItemContainer><EyeIcon />          <StyledLink>View Profile</StyledLink>  </ItemContainer>
+          <ItemContainer> <EyeIcon />         <StyledLink>View Profile</StyledLink>  </ItemContainer>
 
         </DropdownContentContainer>
       </div>
