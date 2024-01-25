@@ -1,5 +1,5 @@
 ## Presentation
-![reactsofar2jan22](https://github.com/choiIsabelle/locationdatabase/assets/67203277/b2b92170-f6ef-4d68-a4e5-eaae352cd9f6)
+![reactsofar2jan24](https://github.com/choiIsabelle/locationdatabase/assets/67203277/008112f3-8888-4eb4-ab44-5dd5466a6f3e)
 
 
 ## How to Run
